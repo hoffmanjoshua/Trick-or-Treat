@@ -3,20 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422C435A253176A800FA52F1 /* ConfettiView in Frameworks */ = {isa = PBXBuildFile; productRef = 422C4359253176A800FA52F1 /* ConfettiView */; };
+		428336142531078200F607CC /* TrickOrTreatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428336132531078200F607CC /* TrickOrTreatViewModel.swift */; };
+		4283361A253107FA00F607CC /* Costume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42833619253107FA00F607CC /* Costume.swift */; };
+		428336262531488300F607CC /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428336252531488300F607CC /* DefaultView.swift */; };
+		4283362A253148F700F607CC /* CharacterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429D48DA253101A0008B5873 /* CharacterPicker.swift */; };
+		4283362D2531498200F607CC /* LinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283362C2531498200F607CC /* LinkHandler.swift */; };
+		4283363125315FDF00F607CC /* CandyMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283363025315FDF00F607CC /* CandyMeterView.swift */; };
 		429D48D9253101A0008B5873 /* Trick_or_TreatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429D48D8253101A0008B5873 /* Trick_or_TreatApp.swift */; };
-		429D48DB253101A0008B5873 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429D48DA253101A0008B5873 /* ContentView.swift */; };
 		429D48DD253101A2008B5873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 429D48DC253101A2008B5873 /* Assets.xcassets */; };
 		429D48E0253101A2008B5873 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 429D48DF253101A2008B5873 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		428336132531078200F607CC /* TrickOrTreatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickOrTreatViewModel.swift; sourceTree = "<group>"; };
+		42833619253107FA00F607CC /* Costume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Costume.swift; sourceTree = "<group>"; };
+		428336252531488300F607CC /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
+		4283362C2531498200F607CC /* LinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkHandler.swift; sourceTree = "<group>"; };
+		4283363025315FDF00F607CC /* CandyMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyMeterView.swift; sourceTree = "<group>"; };
 		429D48D5253101A0008B5873 /* Trick or Treat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trick or Treat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		429D48D8253101A0008B5873 /* Trick_or_TreatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trick_or_TreatApp.swift; sourceTree = "<group>"; };
-		429D48DA253101A0008B5873 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		429D48DA253101A0008B5873 /* CharacterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPicker.swift; sourceTree = "<group>"; };
 		429D48DC253101A2008B5873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		429D48DF253101A2008B5873 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		429D48E1253101A2008B5873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,12 +38,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				422C435A253176A800FA52F1 /* ConfettiView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42833616253107D900F607CC /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				428336132531078200F607CC /* TrickOrTreatViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		42833618253107EB00F607CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42833619253107FA00F607CC /* Costume.swift */,
+				4283362C2531498200F607CC /* LinkHandler.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4283362225312D3800F607CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				429D48DA253101A0008B5873 /* CharacterPicker.swift */,
+				428336252531488300F607CC /* DefaultView.swift */,
+				4283363025315FDF00F607CC /* CandyMeterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		429D48CC253101A0008B5873 = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				429D48D8253101A0008B5873 /* Trick_or_TreatApp.swift */,
-				429D48DA253101A0008B5873 /* ContentView.swift */,
+				42833618253107EB00F607CC /* Models */,
+				42833616253107D900F607CC /* View Model */,
+				4283362225312D3800F607CC /* Views */,
 				429D48DC253101A2008B5873 /* Assets.xcassets */,
 				429D48E1253101A2008B5873 /* Info.plist */,
 				429D48DE253101A2008B5873 /* Preview Content */,
@@ -85,6 +126,9 @@
 			dependencies = (
 			);
 			name = "Trick or Treat";
+			packageProductDependencies = (
+				422C4359253176A800FA52F1 /* ConfettiView */,
+			);
 			productName = "Trick or Treat";
 			productReference = 429D48D5253101A0008B5873 /* Trick or Treat.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +156,9 @@
 				Base,
 			);
 			mainGroup = 429D48CC253101A0008B5873;
+			packageReferences = (
+				422C4358253176A800FA52F1 /* XCRemoteSwiftPackageReference "ConfettiView" */,
+			);
 			productRefGroup = 429D48D6253101A0008B5873 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				429D48DB253101A0008B5873 /* ContentView.swift in Sources */,
+				4283361A253107FA00F607CC /* Costume.swift in Sources */,
+				4283362A253148F700F607CC /* CharacterPicker.swift in Sources */,
+				428336262531488300F607CC /* DefaultView.swift in Sources */,
+				4283363125315FDF00F607CC /* CandyMeterView.swift in Sources */,
+				4283362D2531498200F607CC /* LinkHandler.swift in Sources */,
+				428336142531078200F607CC /* TrickOrTreatViewModel.swift in Sources */,
 				429D48D9253101A0008B5873 /* Trick_or_TreatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hoffmanjoshua.Trick-or-Treat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hoffmanjoshua.Trick-or-Treat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -328,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		422C4358253176A800FA52F1 /* XCRemoteSwiftPackageReference "ConfettiView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ziligy/ConfettiView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		422C4359253176A800FA52F1 /* ConfettiView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 422C4358253176A800FA52F1 /* XCRemoteSwiftPackageReference "ConfettiView" */;
+			productName = ConfettiView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 429D48CD253101A0008B5873 /* Project object */;
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct Trick_or_TreatApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DefaultView()
         }
     }
 }
