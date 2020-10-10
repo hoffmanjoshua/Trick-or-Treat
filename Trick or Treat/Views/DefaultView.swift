@@ -58,7 +58,7 @@ struct DefaultView: View {
                         .font(.system(size: 20))
                     }
                     .padding()
-                    .background(Color(UIColor.tertiarySystemBackground))
+                    .background(Color(UIColor.tertiarySystemFill))
                     .clipShape(RoundedRectangle(cornerRadius: 18))
                     .padding(.bottom)
                     
@@ -113,5 +113,6 @@ struct DefaultView: View {
 struct DefaultView_Previews: PreviewProvider {
     static var previews: some View {
         DefaultView()
+            .preferredColorScheme(.dark)
     }
 }
