@@ -8,7 +8,7 @@
 import Foundation
 
 struct Candy {
-    var sender: String
+    var id: String
 }
 
 extension URL {
@@ -20,7 +20,7 @@ var receivedCandy: Candy? {
     guard isDeeplink else { return nil }
 
     if pathComponents.count > 1 {
-        let receivedCandy = Candy(sender: pathComponents[1])
+        let receivedCandy = Candy(id: pathComponents[1])
         print(receivedCandy)
         return receivedCandy
     }

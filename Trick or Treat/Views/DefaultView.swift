@@ -64,7 +64,8 @@ struct DefaultView: View {
                     
                     Spacer()
                     Button(action: {
-                        UIApplication.shared.open(URL(string: "sms:&body=trickortreat://candy/\(viewModel.name)")!, options: [:], completionHandler: nil)
+                        let destination = URLComponents(string: "trickortreat://candy/\(viewModel.generateID())")
+                        UIApplication.shared.open(URL(string: "sms:&body=\(destination!)")!, options: [:], completionHandler: nil)
                     }) {
                         Text("Send candy to a friend!")
                             .font(.system(size: 20))
@@ -90,11 +91,12 @@ struct DefaultView: View {
             .onOpenURL{ url in
                 let receivedCandy = url.receivedCandy
                 if (receivedCandy != nil) {
-                    viewModel.addCandy()
-                    confettiOn = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        withAnimation {
-                            confettiOn = false
+                    if viewModel.addCandy(receivedCandy!) {
+                        confettiOn = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            withAnimation {
+                                confettiOn = false
+                            }
                         }
                     }
                 }

@@ -27,12 +27,15 @@ class TrickOrTreatViewModel: ObservableObject {
     
     @Published private(set) var candyMeterRangeMax = 0
     
+    @Published private(set) var storedIDs: [String] = []
+    
     init() {
         name = UserDefaults.standard.string(forKey: "userName") ?? ""
         chosenCostumeString = UserDefaults.standard.string(forKey: "chosenCostumeString") ?? "👻"
         chosenCostumeID = UserDefaults.standard.integer(forKey: "chosenCostumeID")
         candyCount = UserDefaults.standard.integer(forKey: "candyCount")
         candyGoal = UserDefaults.standard.integer(forKey: "candyGoal")
+        storedIDs = UserDefaults.standard.stringArray(forKey: "storedIDs") ?? []
     }
     
     public var costumes = [
@@ -57,9 +60,27 @@ class TrickOrTreatViewModel: ObservableObject {
         self.name = name
     }
     
-    func addCandy() {
+    func addCandy(_ candy: Candy) -> Bool{
+        if storedIDs.contains(candy.id) {
+            return false
+        }
         candyCount += 1
+        storeID(id: candy.id)
         UserDefaults.standard.set(candyCount, forKey: "candyCount")
+        return true
+    }
+    
+    func storeID(id: String) {
+        storedIDs.append(id)
+        UserDefaults.standard.set(storedIDs, forKey: "storedIDs")
+    }
+    
+    func generateID() -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let id = String((0..<6).map{ _ in letters.randomElement()! })
+        storeID(id: id)
+        print(id)
+        return id
     }
     
     
