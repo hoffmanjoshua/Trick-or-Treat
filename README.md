@@ -1,4 +1,4 @@
-# Trick-or-Treat
+# Trick-or-Treat 🍬🍫🍭
 A virtual way to exchange "candy" with your friends.
 
 ## How it Works
