@@ -50,7 +50,7 @@ struct WidgetEntryView: View {
                 .overlay(
                     Text("\(entry.candyCount)")
                         .bold()
-                        .font(.system(size: 50))
+                        .font(.system(size: 50, design: .rounded))
                         .foregroundColor(.white)
                         .shadow(radius: 2)
                         .offset(y: 7)
