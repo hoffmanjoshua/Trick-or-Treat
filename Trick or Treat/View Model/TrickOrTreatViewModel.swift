@@ -15,15 +15,31 @@ class TrickOrTreatViewModel: ObservableObject {
     
     @Published private(set) var candyCount = 0 {
         didSet {
-            if candyCount >= 25 {
-                candyGoal = 100
+            if candyCount >= 250 {
+                candyGoal = 500
+                candyImgNumber = 6
             } else if candyCount >= 100 {
                 candyGoal = 250
+                candyImgNumber = 5
+            } else if candyCount >= 25 {
+                candyGoal = 100
+                candyImgNumber = 4
+            } else if candyCount >= 10 {
+                candyGoal = 25
+                candyImgNumber = 3
+            } else if candyCount >= 5 {
+                candyGoal = 10
+                candyImgNumber = 2
+            } else {
+                candyGoal = 5
+                candyImgNumber = 1
             }
             UserDefaults.standard.set(candyGoal, forKey: "candyGoal")
+            UserDefaults.standard.set(candyImgNumber, forKey: "candyImgNumber")
         }
     }
-    @Published private(set) var candyGoal = 25
+    @Published private(set) var candyGoal = 5
+    @Published private(set) var candyImgNumber = 0
     
     @Published private(set) var candyMeterRangeMax = 0
     
@@ -36,6 +52,7 @@ class TrickOrTreatViewModel: ObservableObject {
         candyCount = UserDefaults.standard.integer(forKey: "candyCount")
         candyGoal = UserDefaults.standard.integer(forKey: "candyGoal")
         storedIDs = UserDefaults.standard.stringArray(forKey: "storedIDs") ?? []
+        candyImgNumber = UserDefaults.standard.integer(forKey: "candyImgNumber")
     }
     
     public var costumes = [

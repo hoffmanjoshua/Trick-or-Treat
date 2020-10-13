@@ -32,18 +32,20 @@ struct DefaultView: View {
                 .padding()
                 VStack {
                     VStack(spacing: 0) {
-                        Text("🔮")
-                            .font(.system(size: 200))
+                        Image("Pumpkin-\(viewModel.candyImgNumber)")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 250)
                             .overlay(
                                 Text(String(viewModel.candyCount))
                                     .font(.system(size: 80, design: .rounded))
                                     .bold()
                                     .shadow(radius: 5)
                                     .foregroundColor(.white)
-                                    .offset(y: -10)
+                                    .offset(y: 20)
                             )
                         Text("Pieces of Candy")
-                            .offset(y: -15)
+                            .offset(y: 0)
                             .padding(.bottom)
                     }
                     
