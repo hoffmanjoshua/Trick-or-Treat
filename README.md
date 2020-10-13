@@ -11,7 +11,7 @@ A virtual way to exchange "candy" with your friends.
 |---|---|---|
 
 #### Widget
-<img src="/mockups/widget.jpg" width=300 />
+<img src="/mockups/widget-demo.png" width=300 />
 
 ## Attributions & Packages
 * [ConfettiView](https://github.com/ziligy/ConfettiView)
