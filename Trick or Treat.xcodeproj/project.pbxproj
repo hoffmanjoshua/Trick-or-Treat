@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		422C435A253176A800FA52F1 /* ConfettiView in Frameworks */ = {isa = PBXBuildFile; productRef = 422C4359253176A800FA52F1 /* ConfettiView */; };
+		425DB9B925360BA1004AAAE1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425DB99C25360B2A004AAAE1 /* WidgetKit.framework */; };
+		425DB9BA25360BA1004AAAE1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425DB99E25360B2A004AAAE1 /* SwiftUI.framework */; };
+		425DB9BD25360BA1004AAAE1 /* Trick_or_Treat_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425DB9BC25360BA1004AAAE1 /* Trick_or_Treat_Widget.swift */; };
+		425DB9BF25360BA3004AAAE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425DB9BE25360BA3004AAAE1 /* Assets.xcassets */; };
+		425DB9C325360BA3004AAAE1 /* Trick or Treat WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 425DB9B825360BA1004AAAE1 /* Trick or Treat WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		425DB9C925360E26004AAAE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 429D48DC253101A2008B5873 /* Assets.xcassets */; };
 		428336142531078200F607CC /* TrickOrTreatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428336132531078200F607CC /* TrickOrTreatViewModel.swift */; };
 		4283361A253107FA00F607CC /* Costume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42833619253107FA00F607CC /* Costume.swift */; };
 		428336262531488300F607CC /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428336252531488300F607CC /* DefaultView.swift */; };
@@ -19,7 +25,39 @@
 		429D48E0253101A2008B5873 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 429D48DF253101A2008B5873 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		425DB9C125360BA3004AAAE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 429D48CD253101A0008B5873 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 425DB9B725360BA1004AAAE1;
+			remoteInfo = "Trick or Treat WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		425DB9A925360B2C004AAAE1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				425DB9C325360BA3004AAAE1 /* Trick or Treat WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		425DB99C25360B2A004AAAE1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		425DB99E25360B2A004AAAE1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		425DB9B825360BA1004AAAE1 /* Trick or Treat WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Trick or Treat WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		425DB9BC25360BA1004AAAE1 /* Trick_or_Treat_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trick_or_Treat_Widget.swift; sourceTree = "<group>"; };
+		425DB9BE25360BA3004AAAE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		425DB9C025360BA3004AAAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		425DB9CF25360ED9004AAAE1 /* Trick or Treat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Trick or Treat.entitlements"; sourceTree = "<group>"; };
+		425DB9D2253610C3004AAAE1 /* Trick or Treat WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Trick or Treat WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		428336132531078200F607CC /* TrickOrTreatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickOrTreatViewModel.swift; sourceTree = "<group>"; };
 		42833619253107FA00F607CC /* Costume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Costume.swift; sourceTree = "<group>"; };
 		428336252531488300F607CC /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
@@ -34,6 +72,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		425DB9B525360BA1004AAAE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425DB9BA25360BA1004AAAE1 /* SwiftUI.framework in Frameworks */,
+				425DB9B925360BA1004AAAE1 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		429D48D2253101A0008B5873 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,6 +92,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		425DB99B25360B2A004AAAE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				425DB99C25360B2A004AAAE1 /* WidgetKit.framework */,
+				425DB99E25360B2A004AAAE1 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		425DB9BB25360BA1004AAAE1 /* Trick or Treat Widget */ = {
+			isa = PBXGroup;
+			children = (
+				425DB9BC25360BA1004AAAE1 /* Trick_or_Treat_Widget.swift */,
+				425DB9BE25360BA3004AAAE1 /* Assets.xcassets */,
+				425DB9C025360BA3004AAAE1 /* Info.plist */,
+			);
+			path = "Trick or Treat Widget";
+			sourceTree = "<group>";
+		};
 		42833616253107D900F607CC /* View Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +141,10 @@
 		429D48CC253101A0008B5873 = {
 			isa = PBXGroup;
 			children = (
+				425DB9D2253610C3004AAAE1 /* Trick or Treat WidgetExtension.entitlements */,
 				429D48D7253101A0008B5873 /* Trick or Treat */,
+				425DB9BB25360BA1004AAAE1 /* Trick or Treat Widget */,
+				425DB99B25360B2A004AAAE1 /* Frameworks */,
 				429D48D6253101A0008B5873 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				429D48D5253101A0008B5873 /* Trick or Treat.app */,
+				425DB9B825360BA1004AAAE1 /* Trick or Treat WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +161,7 @@
 		429D48D7253101A0008B5873 /* Trick or Treat */ = {
 			isa = PBXGroup;
 			children = (
+				425DB9CF25360ED9004AAAE1 /* Trick or Treat.entitlements */,
 				429D48D8253101A0008B5873 /* Trick_or_TreatApp.swift */,
 				42833618253107EB00F607CC /* Models */,
 				42833616253107D900F607CC /* View Model */,
@@ -113,6 +184,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		425DB9B725360BA1004AAAE1 /* Trick or Treat WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 425DB9C425360BA3004AAAE1 /* Build configuration list for PBXNativeTarget "Trick or Treat WidgetExtension" */;
+			buildPhases = (
+				425DB9B425360BA1004AAAE1 /* Sources */,
+				425DB9B525360BA1004AAAE1 /* Frameworks */,
+				425DB9B625360BA1004AAAE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Trick or Treat WidgetExtension";
+			productName = "Trick or Treat WidgetExtension";
+			productReference = 425DB9B825360BA1004AAAE1 /* Trick or Treat WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		429D48D4253101A0008B5873 /* Trick or Treat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 429D48E4253101A2008B5873 /* Build configuration list for PBXNativeTarget "Trick or Treat" */;
@@ -120,10 +208,12 @@
 				429D48D1253101A0008B5873 /* Sources */,
 				429D48D2253101A0008B5873 /* Frameworks */,
 				429D48D3253101A0008B5873 /* Resources */,
+				425DB9A925360B2C004AAAE1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				425DB9C225360BA3004AAAE1 /* PBXTargetDependency */,
 			);
 			name = "Trick or Treat";
 			packageProductDependencies = (
@@ -142,6 +232,9 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					425DB9B725360BA1004AAAE1 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
 					429D48D4253101A0008B5873 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
@@ -164,11 +257,21 @@
 			projectRoot = "";
 			targets = (
 				429D48D4253101A0008B5873 /* Trick or Treat */,
+				425DB9B725360BA1004AAAE1 /* Trick or Treat WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		425DB9B625360BA1004AAAE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425DB9C925360E26004AAAE1 /* Assets.xcassets in Resources */,
+				425DB9BF25360BA3004AAAE1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		429D48D3253101A0008B5873 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,6 +284,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		425DB9B425360BA1004AAAE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425DB9BD25360BA1004AAAE1 /* Trick_or_Treat_Widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		429D48D1253101A0008B5873 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,7 +308,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		425DB9C225360BA3004AAAE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 425DB9B725360BA1004AAAE1 /* Trick or Treat WidgetExtension */;
+			targetProxy = 425DB9C125360BA3004AAAE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		425DB9C525360BA3004AAAE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Trick or Treat WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4476638AE3;
+				INFOPLIST_FILE = "Trick or Treat Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hoffmanjoshua.Trick-or-Treat.Trick-or-Treat-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		425DB9C625360BA3004AAAE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Trick or Treat WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4476638AE3;
+				INFOPLIST_FILE = "Trick or Treat Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hoffmanjoshua.Trick-or-Treat.Trick-or-Treat-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		429D48E2253101A2008B5873 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -317,8 +480,10 @@
 		429D48E5253101A2008B5873 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Trick or Treat/Trick or Treat.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Trick or Treat/Preview Content\"";
 				DEVELOPMENT_TEAM = 4476638AE3;
@@ -339,8 +504,10 @@
 		429D48E6253101A2008B5873 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Trick or Treat/Trick or Treat.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Trick or Treat/Preview Content\"";
 				DEVELOPMENT_TEAM = 4476638AE3;
@@ -361,6 +528,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		425DB9C425360BA3004AAAE1 /* Build configuration list for PBXNativeTarget "Trick or Treat WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				425DB9C525360BA3004AAAE1 /* Debug */,
+				425DB9C625360BA3004AAAE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		429D48D0253101A0008B5873 /* Build configuration list for PBXProject "Trick or Treat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

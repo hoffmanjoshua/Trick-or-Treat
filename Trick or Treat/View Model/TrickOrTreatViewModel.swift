@@ -6,8 +6,11 @@
 //
 import SwiftUI
 import Combine
+import WidgetKit
 
 class TrickOrTreatViewModel: ObservableObject {
+    
+    private var userDefaults = UserDefaults(suiteName: "group.com.hoffmanjoshua.Trick-or-Treat")!
     
     @Published private(set) var name = ""
     @Published private(set) var chosenCostumeID: Int = -1
@@ -37,8 +40,10 @@ class TrickOrTreatViewModel: ObservableObject {
                 candyGoal = 5
                 candyImgNumber = 0
             }
-            UserDefaults.standard.set(candyGoal, forKey: "candyGoal")
-            UserDefaults.standard.set(candyImgNumber, forKey: "candyImgNumber")
+            userDefaults.set(candyGoal as Int, forKey: "candyGoal")
+//            UserDefaults.standard.set(candyGoal, forKey: "candyGoal")
+            userDefaults.set(candyImgNumber as Int, forKey: "candyImgNumber")
+//            UserDefaults.standard.set(candyImgNumber, forKey: "candyImgNumber")
         }
     }
     @Published private(set) var candyGoal = 5
@@ -49,13 +54,20 @@ class TrickOrTreatViewModel: ObservableObject {
     @Published private(set) var storedIDs: [String] = []
     
     init() {
-        name = UserDefaults.standard.string(forKey: "userName") ?? ""
-        chosenCostumeString = UserDefaults.standard.string(forKey: "chosenCostumeString") ?? "👻"
-        chosenCostumeID = UserDefaults.standard.integer(forKey: "chosenCostumeID")
-        candyCount = UserDefaults.standard.integer(forKey: "candyCount")
-        candyGoal = UserDefaults.standard.integer(forKey: "candyGoal")
-        storedIDs = UserDefaults.standard.stringArray(forKey: "storedIDs") ?? []
-        candyImgNumber = UserDefaults.standard.integer(forKey: "candyImgNumber")
+//        name = UserDefaults.standard.string(forKey: "userName") ?? ""
+        name = userDefaults.string(forKey: "userName") ?? ""
+//        chosenCostumeString = UserDefaults.standard.string(forKey: "chosenCostumeString") ?? "👻"
+        chosenCostumeString = userDefaults.string(forKey: "chosenCostumeString") ?? "👻"
+//        chosenCostumeID = UserDefaults.standard.integer(forKey: "chosenCostumeID")
+        chosenCostumeID = userDefaults.integer(forKey: "chosenCostumeID")
+//        candyCount = UserDefaults.standard.integer(forKey: "candyCount")
+        candyCount = userDefaults.integer(forKey: "candyCount")
+//        candyGoal = UserDefaults.standard.integer(forKey: "candyGoal")
+        candyGoal = userDefaults.integer(forKey: "candyGoal")
+//        storedIDs = UserDefaults.standard.stringArray(forKey: "storedIDs") ?? []
+        storedIDs = userDefaults.stringArray(forKey: "storedIDs") ?? []
+//        candyImgNumber = UserDefaults.standard.integer(forKey: "candyImgNumber")
+        candyImgNumber = userDefaults.integer(forKey: "candyImgNumber")
     }
     
     public var costumes = [
@@ -71,12 +83,15 @@ class TrickOrTreatViewModel: ObservableObject {
     func chooseCostume(id: Int){
         chosenCostumeID = id
         chosenCostumeString = costumes.first(where: { $0.id == id })?.emoji ?? ""
-        UserDefaults.standard.set(chosenCostumeID, forKey: "chosenCostumeID")
-        UserDefaults.standard.set(chosenCostumeString, forKey: "chosenCostumeString" )
+//        UserDefaults.standard.set(chosenCostumeID, forKey: "chosenCostumeID")
+        userDefaults.set(chosenCostumeID, forKey: "chosenCostumeID")
+//        UserDefaults.standard.set(chosenCostumeString, forKey: "chosenCostumeString" )
+        userDefaults.set(chosenCostumeString, forKey: "chosenCostumeString")
     }
     
     func updateName(name: String) {
-        UserDefaults.standard.set(name, forKey: "userName")
+//        UserDefaults.standard.set(name, forKey: "userName")
+        userDefaults.set(name, forKey: "userName")
         self.name = name
     }
     
@@ -86,13 +101,16 @@ class TrickOrTreatViewModel: ObservableObject {
         }
         candyCount += 1
         storeID(id: candy.id)
-        UserDefaults.standard.set(candyCount, forKey: "candyCount")
+//        UserDefaults.standard.set(candyCount, forKey: "candyCount")
+        userDefaults.set(candyCount, forKey: "candyCount")
+        WidgetCenter.shared.reloadAllTimelines()
         return true
     }
     
     func storeID(id: String) {
         storedIDs.append(id)
-        UserDefaults.standard.set(storedIDs, forKey: "storedIDs")
+//        UserDefaults.standard.set(storedIDs, forKey: "storedIDs")
+        userDefaults.set(storedIDs, forKey: "storedIDs")
     }
     
     func generateID() -> String {
