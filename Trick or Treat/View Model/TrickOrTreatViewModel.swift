@@ -30,9 +30,12 @@ class TrickOrTreatViewModel: ObservableObject {
             } else if candyCount >= 5 {
                 candyGoal = 10
                 candyImgNumber = 2
-            } else {
+            } else if candyCount > 0 {
                 candyGoal = 5
                 candyImgNumber = 1
+            } else {
+                candyGoal = 5
+                candyImgNumber = 0
             }
             UserDefaults.standard.set(candyGoal, forKey: "candyGoal")
             UserDefaults.standard.set(candyImgNumber, forKey: "candyImgNumber")
