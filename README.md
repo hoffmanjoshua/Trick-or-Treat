@@ -7,6 +7,9 @@ A virtual way to exchange "candy" with your friends.
 * When you receive a candy link, click on it to add it to your stash.
 * Compare with friends to see who can collect the most!
 
+|![Main Screen](/mockups/home.png)   | ![Confetti](/mockups/confetti.png)  | ![Settings Screen](/mockups/settings.png)  |
+|---|---|---|
+
 ## Attributions & Packages
 * [ConfettiView](https://github.com/ziligy/ConfettiView)
 
