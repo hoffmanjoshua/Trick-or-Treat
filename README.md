@@ -10,6 +10,9 @@ A virtual way to exchange "candy" with your friends.
 |![Main Screen](/mockups/home.png)   | ![Confetti](/mockups/confetti.png)  | ![Settings Screen](/mockups/settings.png)  |
 |---|---|---|
 
+#### Widget
+<img src="/mockups/widget.jpg" width=300 />
+
 ## Attributions & Packages
 * [ConfettiView](https://github.com/ziligy/ConfettiView)
 
